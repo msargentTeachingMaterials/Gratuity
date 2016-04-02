@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.monkey.tasteful.gratuity.MainActivity"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/plate">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/text_view_height"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/subtotal"
+        android:id="@+id/subtotalPrompt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/text_view_margin"
+        android:textSize="@dimen/text_size_small"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/text_view_height"
+        android:inputType="numberDecimal"
+        android:ems="8"
+        android:id="@+id/subtotal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/text_view_margin"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtotalPrompt"
+        android:id="@+id/seekBarLine"
+        android:layout_margin="@dimen/text_view_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/text_view_height"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/tipPercentPrompt"
+            android:id="@+id/tipPercentPrompt"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size_small"
+            />
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:max="30"
+            android:progress="15"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:minWidth="70dp"
+            android:layout_height="@dimen/text_view_height"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0%"
+            android:id="@+id/tipPercent"
+            android:textSize="@dimen/text_size"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/text_view_height"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/tipPrompt"
+        android:id="@+id/tipPrompt"
+        android:layout_below="@id/seekBarLine"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/text_view_margin"
+        android:textSize="@dimen/text_size_small"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/text_view_height"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="$0.00"
+        android:id="@+id/tip"
+        android:layout_below="@id/seekBarLine"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/text_view_margin"
+        android:textSize="@dimen/text_size"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/text_view_height"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/total"
+        android:id="@+id/totalPrompt"
+        android:layout_below="@id/tipPrompt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/text_view_margin"
+        android:textSize="@dimen/text_size_small"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/text_view_height"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="$0.00"
+        android:id="@+id/total"
+        android:layout_below="@id/tip"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/text_view_margin"
+        android:textSize="@dimen/text_size"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        android:id="@+id/button"
+        android:layout_below="@id/total"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/text_size"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
